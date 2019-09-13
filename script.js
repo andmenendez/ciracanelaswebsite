@@ -33,6 +33,7 @@ function updateView() {
 		el.style.opacity = "1";
 	});
 }
+// document.getElementById("continue_text").addEventListener("click", updateView());
 
 function turnOff(element) {
 	element.style.opacity = 0;
@@ -51,9 +52,7 @@ function turnAllOff() {
 	});
 }
 function turnOffContact() {
-	setTimeout(function() {
-		document.getElementById("card_contact").style.display = "none";
-	}, 750);
+	document.getElementById("card_contact").style.transform = "translateY(1000px)";
 }
 
 document.getElementById("nav_about").addEventListener("click", function() {
@@ -78,13 +77,8 @@ document.getElementById("nav_qualifications").addEventListener("click", function
 });
 document.getElementById("nav_contact").addEventListener("click", function() {
 	turnAllOff();
-	document.getElementById("card_contact").style.display = "inline";
-	document.getElementById("card_contact").style.opacity = "0";
+	document.getElementById("card_contact").style.transform = "translateY(0px)";
 	turnOn("contact");
-
-	setTimeout(function() {
-		document.getElementById("card_contact").style.display = "inline";
-	}, 750);
 });
 window.addEventListener('mousewheel', updateView);
 
