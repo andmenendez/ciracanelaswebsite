@@ -11,12 +11,11 @@
 
     	<div id="main">
     		<span id="title_text">
-		        <div  class="noselect"  id="title_name"    >Cira Canelas</div>
+		        <div  class="noselect"  id="title_name"    >Cira Canelas, LCPC</div>
 			    <div  class="noselect"  id="title_slogan"  >"what i am, i must become"</div>
-		        <span class="noselect"  id="title_therapy" >Therapy and Counseling</span>
+		        <span class="noselect"  id="title_therapy" >Psychotherapist</span>
 		    </span>
-		    <span id="continue_text" onclick="updateView()">continue..<br/></span>
-	        <span id="continue"><strong></strong></span>
+		    <span id="continue_text" class= "noselect" onclick="updateView()">scroll or click here<br/>to continue..<br/></span>
 	    </div>
 
         <div id="all" class="content">
@@ -28,15 +27,15 @@
 
 			<div id="navbar" class="content">
         		<div id="navbar_selects">
-	        		<span id="nav_about" 			class="nav content noselect nav_selected">About</span>
-	        		<span id="nav_treatment" 		class="nav content noselect">Treatment</span>
-	        		<span id="nav_sessions" 		class="nav content noselect">Sessions</span>
-	        		<span id="nav_qualifications" 	class="nav content noselect">Qualifications</span>
-	        		<span id="nav_contact" 			class="nav content noselect">Contact</span>
+	        		<span id="nav_home" 					onclick="turnOn_home()" 					class="nav content noselect nav_selected">	Home					</span>
+	        		<span id="nav_treatment" 			onclick="turnOn_treatment()" 			class="nav content noselect">								Treatment			</span>
+	        		<span id="nav_sessions" 			onclick="turnOn_sessions()" 			class="nav content noselect">								Sessions			</span>
+	        		<span id="nav_qualifications" onclick="turnOn_qualifications()" class="nav content noselect">								Qualifications</span>
+	        		<span id="nav_contact" 				onclick="turnOn_contact()" 				class="nav content noselect">								Contact				</span>
 	        	</div>
         	</div>
         	<div id="cards">
-	        	<div id="card_about" class="card">
+	        	<div id="card_home" class="card">
 	                <p>
 	                    You feel confused, disoriented and in need of guidance. You have feelings of anxiety, a sense of emptiness and deep sadness. You reach out to friends and family members but there is still this deep need inside of you to find a way out of your confusion, your feelings of sadness and emptiness, your anxiety. Maybe you feel you've had enough with unsatisfying relationships. You want to find a way out of your loneliness, or your traumatic past. It is time for professional help. Let me help you.
 	                </p>
@@ -146,8 +145,8 @@
 
 	        	<div id="card_contact" class="card">
 	        		<strong>Cira Canelas</strong><br/>
-	        		<a href = "mailto: ciracanelas@gmail.com">ciracanelas@gmail.com</a>
-	        		<a href = "tel: 301-882-1870">(301)-882-1870</a>
+	        		<a tabindex="-1" href = "mailto: ciracanelas@gmail.com">ciracanelas@gmail.com</a>
+	        		<a tabindex="-1" href = "tel: 301-882-1870">(301)-882-1870</a>
 					<div class="grid_el center spacer"></div>
 	                <img src="logo.jpg" alt="ciracanelaslogo">
 	                <div class="minor_text">"what i am, i must become"</div>

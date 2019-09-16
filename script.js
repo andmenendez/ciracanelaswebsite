@@ -1,5 +1,6 @@
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
+  window.tabindex="-1"
 }
 function updateView() {
 	document.getElementById("title_name").style.transition = "0.5s";
@@ -15,10 +16,10 @@ function updateView() {
 	document.getElementById("title_therapy").style.opacity = 0;
 
 
-	document.getElementById("continue").display = "hidden";
-	document.getElementById("continue").style.opacity = 0;
+	// document.getElementById("continue").display = "hidden";
+	// document.getElementById("continue").style.opacity = 0;
 
-	document.getElementById("continue_text").display = "hidden";
+	document.getElementById("continue_text").display = "hidden";		
 	document.getElementById("continue_text").style.opacity = 0;
 
 	document.getElementById("main").style.height = "0vh";
@@ -55,31 +56,42 @@ function turnOffContact() {
 	document.getElementById("card_contact").style.transform = "translateY(1000px)";
 }
 
-document.getElementById("nav_about").addEventListener("click", function() {
-	turnAllOff();
-	turnOffContact();
-	turnOn("about");
-});
-document.getElementById("nav_treatment").addEventListener("click", function() {
-	turnAllOff();
-	turnOffContact();
-	turnOn("treatment");
-});
-document.getElementById("nav_sessions").addEventListener("click", function() {
-	turnAllOff();
-	turnOffContact();
-	turnOn("sessions");
-});
-document.getElementById("nav_qualifications").addEventListener("click", function() {
-	turnAllOff();
-	turnOffContact();
-	turnOn("qualifications");
-});
-document.getElementById("nav_contact").addEventListener("click", function() {
-	turnAllOff();
-	document.getElementById("card_contact").style.transform = "translateY(0px)";
-	turnOn("contact");
-});
+function turnOn_home() {
+	// document.getElementById("nav_home").addEventListener("click", function() {
+		turnAllOff();
+		turnOffContact();
+		turnOn("home");
+	// });
+}
+function turnOn_treatment() {
+	// document.getElementById("nav_treatment").addEventListener("click", function() {
+		turnAllOff();
+		turnOffContact();
+		turnOn("treatment");
+	// });
+}
+function turnOn_sessions() {
+	// document.getElementById("nav_sessions").addEventListener("click", function() {
+		turnAllOff();
+		turnOffContact();
+		turnOn("sessions");
+	// });
+}
+function turnOn_qualifications() {
+	// document.getElementById("nav_qualifications").addEventListener("click", function() {
+		turnAllOff();
+		turnOffContact();
+		turnOn("qualifications");
+	// });
+}
+function turnOn_contact() {
+	// document.getElementById("nav_contact").addEventListener("click", function() {
+		turnAllOff();
+		document.getElementById("card_contact").style.transform = "translateY(0px)";
+		turnOn("contact");
+	// });
+}
+
 window.addEventListener('mousewheel', updateView);
 
 
