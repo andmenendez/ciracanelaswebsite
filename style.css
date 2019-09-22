@@ -18,7 +18,7 @@ body {
 	vertical-align: center;
 
 	background-image: url("bg1.jpg");
-	background-size: contain;
+/* 	background-size: contain; */
 	
 	transition: 0.75s;
 	transition-timing-function: cubic-bezier(.87,.11,.23,.95);
