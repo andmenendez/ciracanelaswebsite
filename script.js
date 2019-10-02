@@ -2,23 +2,72 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
   window.tabindex="-1"
 }
+
+var title_name = document.getElementById("title_name1")
+var letters_title_name = title_name.textContent.split("")
+while(title_name.hasChildNodes()) {
+	title_name.removeChild(title_name.firstChild);
+}
+
+
+var letters = letters_title_name;
+
+for(var i = 0; i < letters.length; i++) {
+  var letter = document.createElement('span');
+  var style = 'opacity 2s linear';
+  var delay = (Math.random() * 2) + 1;
+  letter.appendChild(document.createTextNode(letters[i]));
+  letter.style.WebKitTransition   = letter.style.transition = style;
+  letter.style.WebKitTransitionDelay   = letter.style.transitionDelay = delay + 's';
+  letter.style.opacity = 1;
+  title_name.appendChild(letter);
+}
+
+setTimeout(function() {
+  for(var i = 0; i < title_name.childNodes.length; i++) {
+    title_name.childNodes[i].style.opacity = 0;
+  }
+}, 0);
+
+// -------------- -------------- -------------- -------------- -------------- --------------
+
+var title_therapy = document.getElementById("title_therapy1")
+var letters_title_therapy = title_therapy.textContent.split("")
+while(title_therapy.hasChildNodes()) {
+	title_therapy.removeChild(title_therapy.firstChild);
+}
+
+
+var letters = letters_title_therapy;
+
+for(var i = 0; i < letters.length; i++) {
+  var letter = document.createElement('span');
+  var style = 'opacity 2s linear';
+  var delay = (Math.random() * 2) + 2;
+  letter.appendChild(document.createTextNode(letters[i]));
+  letter.style.WebKitTransition   = letter.style.transition = style;
+  letter.style.WebKitTransitionDelay   = letter.style.transitionDelay = delay + 's';
+  letter.style.opacity = 1;
+  title_therapy.appendChild(letter);
+}
+
+setTimeout(function() {
+  for(var i = 0; i < title_therapy.childNodes.length; i++) {
+    title_therapy.childNodes[i].style.opacity = 0;
+  }
+}, 1000);
+
+setTimeout(function() {
+	document.getElementById("title_name2").style.opacity = 1;
+	document.getElementById("title_therapy2").style.opacity = 1;	
+},7000);
+
+setTimeout(function() {
+	 updateView()
+	}, 9000);
+// -------------- -------------- -------------- -------------- -------------- --------------
+
 function updateView() {
-	document.getElementById("title_name").style.transition = "0.5s";
-	document.getElementById("title_name").display = "hidden";
-	document.getElementById("title_name").style.opacity = 0;
-
-	document.getElementById("title_slogan").style.transition = "0.5s";
-	document.getElementById("title_slogan").display = "hidden";
-	document.getElementById("title_slogan").style.opacity = 0;
-
-	document.getElementById("title_therapy").style.transition = "0.5s";
-	document.getElementById("title_therapy").display = "hidden";
-	document.getElementById("title_therapy").style.opacity = 0;
-
-
-	// document.getElementById("continue").display = "hidden";
-	// document.getElementById("continue").style.opacity = 0;
-
 	document.getElementById("continue_text").display = "hidden";		
 	document.getElementById("continue_text").style.opacity = 0;
 
@@ -101,3 +150,23 @@ window.addEventListener('mousewheel', updateView);
 
 
 
+
+
+
+
+
+	// document.getElementById("title_name").style.transition = "0.5s";
+	// document.getElementById("title_name").display = "hidden";
+	// document.getElementById("title_name").style.opacity = 0;
+
+	// document.getElementById("title_slogan").style.transition = "0.5s";
+	// document.getElementById("title_slogan").display = "hidden";
+	// document.getElementById("title_slogan").style.opacity = 0;
+
+	// document.getElementById("title_therapy").style.transition = "0.5s";
+	// document.getElementById("title_therapy").display = "hidden";
+	// document.getElementById("title_therapy").style.opacity = 0;
+
+
+	// document.getElementById("continue").display = "hidden";
+	// document.getElementById("continue").style.opacity = 0;

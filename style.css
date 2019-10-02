@@ -18,7 +18,8 @@ body {
 	vertical-align: center;
 
 	background-image: url("bg1.jpg");
-/* 	background-size: contain; */
+	background-size: cover;
+	background-position: bottom;
 	
 	transition: 0.75s;
 	transition-timing-function: cubic-bezier(.87,.11,.23,.95);
@@ -26,31 +27,55 @@ body {
 	border-bottom: 5px solid rgba(50,50,50,0.5);
 }
 #title_text {
+	/*transform: translateX();*/
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 }
-#title_name {
+.title_name {
 	margin-top: 25vh;
 	font-family: 'Poppins', serif;
 	font-size: 72px;
 	color: white;
 	padding-right: 12vw;
-
+	width: 100%;
 	z-index: 1000;
 
 	transition: 1s;
 }
-#title_name:hover {
-	opacity: 0;
-}
-#title_therapy {
+.title_therapy {
 	font-family: 'Poppins', serif;
 	font-size: 46px;
 	color: white;
 	opacity: 0.75;
 	padding-right: 50px;
 }
+#title_name1 {
+	font-size: 58px;
+	position: absolute;
+	top: 5%;
+	left: 15%;
+}
+#title_therapy1 {
+	position: absolute;
+	top:40%;
+	left: 40%;
+}
+#title_name2 {
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	opacity: 0;
+	transition: 2s;
+}
+#title_therapy2 {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	opacity: 0;
+	transition: 2s;
+}
+
 #title_slogan {
 	font-family: 'Bilbo', cursive;
 	font-family: 'Poppins', serif;	
@@ -124,6 +149,7 @@ body {
 }
 #nav_title {
 	padding: 15px;
+	padding-top: 20px;
 	font-family: 'Poppins', serif;
 	font-size: 46px;
 }

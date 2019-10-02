@@ -11,29 +11,45 @@
 
     	<div id="main">
     		<span id="title_text">
-		        <div  class="noselect"  id="title_name"    >Cira Canelas, LCPC</div>
-			    <div  class="noselect"  id="title_slogan"  >"what i am, i must become"</div>
-		        <span class="noselect"  id="title_therapy" >Psychotherapist</span>
+		        
+		        <div  class="noselect title_name"  id="title_name1"    >what i am, i must become,</div>
+		        <div  class="noselect title_name"  id="title_name2"    >Cira Canelas, LCPC</div>
+		        
+		        <div class="noselect title_therapy"  id="title_therapy1" >to evolve is to look within</div>
+		        <div class="noselect title_therapy"  id="title_therapy2" >Psychotherapist</div>
+
 		    </span>
-		    <span id="continue_text" class= "noselect" onclick="updateView()">scroll or click here<br/>to continue..<br/></span>
+		    <span id="continue_text" class= "noselect" onclick="updateView()">scroll or click here<br/>to skip..<br/></span>
 	    </div>
 
         <div id="all" class="content">
         	<div id="navbar" class="content">
-        		<span id="nav_title" 				class="content">Therapy and Counseling</span>
+        		<span id="nav_title" class="content">Cira Canelas, LCPC | Therapy</span>
         	</div>
 
         	<div id="content_img" class="content"><!-- <img src="bg2.png" alt="flowers"> --></div>
 
 			<div id="navbar" class="content">
         		<div id="navbar_selects">
-	        		<span id="nav_home" 					onclick="turnOn_home()" 					class="nav content noselect nav_selected">	Home					</span>
-	        		<span id="nav_treatment" 			onclick="turnOn_treatment()" 			class="nav content noselect">								Treatment			</span>
-	        		<span id="nav_sessions" 			onclick="turnOn_sessions()" 			class="nav content noselect">								Sessions			</span>
-	        		<span id="nav_qualifications" onclick="turnOn_qualifications()" class="nav content noselect">								Qualifications</span>
-	        		<span id="nav_contact" 				onclick="turnOn_contact()" 				class="nav content noselect">								Contact				</span>
+	        		<span id="nav_home"				onclick="turnOn_home()" 					
+	        		class="nav content noselect nav_selected">Home</span>
+
+	        		<span id="nav_qualifications" 	onclick="turnOn_qualifications()" 
+	        		class="nav content noselect">About Me</span>
+
+	        		<span id="nav_treatment"		onclick="turnOn_treatment()" 			
+	        		class="nav content noselect">Treatment</span>
+
+	        		<span id="nav_sessions"			onclick="turnOn_sessions()" 			
+	        		class="nav content noselect">Sessions</span>
+
+	        		<span id="nav_contact"			onclick="turnOn_contact()" 				
+	        		class="nav content noselect">Contact</span>
 	        	</div>
         	</div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
         	<div id="cards">
 	        	<div id="card_home" class="card">
 	                <p>
@@ -54,6 +70,33 @@
 					<div class="grid_el center spacer"></div>
 	                <img src="logo.jpg" alt="ciracanelaslogo">
 	            </div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
+	        	<div id="card_qualifications" class="card grid_display">
+        			
+					<div class="center" style="text-align: center; margin-bottom: 50px;">
+						<p style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut eu sem integer vitae justo. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Condimentum lacinia quis vel eros donec ac odio tempor. Non quam lacus suspendisse faucibus interdum posuere lorem. Tortor consequat id porta nibh. Et sollicitudin ac orci phasellus egestas tellus rutrum. Ut eu sem integer vitae justo eget magna. Orci porta non pulvinar neque laoreet. Velit euismod in pellentesque massa placerat duis. Nisi porta lorem mollis aliquam ut porttitor leo a. Suspendisse faucibus interdum posuere lorem ipsum dolor.</p>
+					</div>
+
+                    <div class="grid_el"><strong>Years in Practice:</strong>					</div>
+                    <div class="grid_el">20+ Years												</div>
+                    <div class="grid_el center spacer"></div>
+                    <div class="grid_el"><strong>School:</strong>								</div>
+                    <div class="grid_el">University of Belgrano, Masters in Clinical Psychology	</div>
+                    <div class="grid_el center spacer"></div>
+                    <div class="grid_el"><strong>Year Graduated:</strong>						</div>
+                    <div class="grid_el">1992													</div>
+                    <div class="grid_el center spacer"></div>
+                    <div class="grid_el"><strong>License and State:</strong>					</div>
+                    <div class="grid_el">LC1913 Maryland										</div>
+                    <div class="grid_el center spacer"></div>
+                    <div class="grid_el"><strong>Languages:</strong>					</div>
+                    <div class="grid_el">English, Spanish										</div>
+	        	</div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
 				<div id="card_treatment" class="card grid_display">
 					<div class="grid_el center spacer" style="margin-top: 0px; padding:0;"></div>
 					<div class="grid_el"><strong>Focus Issues:</strong></div>
@@ -97,7 +140,10 @@
                     <div class="grid_el center spacer"></div>
 
 	            </div>
-	        	<div id="card_sessions" class="card grid_display">
+
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
+	            <div id="card_sessions" class="card grid_display">
 					<div class="grid_el center spacer" style="margin-top: 0px; padding:0;"></div>
 					<div class="center"><p><strong>Cost per Session:</strong> $150+ </p></div>
 					<div class="center minor_text">*English & Spanish</p></div>
@@ -126,22 +172,7 @@
 	                </div>
 	        	</div>
 
-	        	<div id="card_qualifications" class="card grid_display">
-	                    <div class="grid_el"><strong>Years in Practice:</strong>					</div>
-	                    <div class="grid_el">20+ Years												</div>
-	                    <div class="grid_el center spacer"></div>
-	                    <div class="grid_el"><strong>School:</strong>								</div>
-	                    <div class="grid_el">University of Belgrano, Masters in Clinical Psychology	</div>
-	                    <div class="grid_el center spacer"></div>
-	                    <div class="grid_el"><strong>Year Graduated:</strong>						</div>
-	                    <div class="grid_el">1992													</div>
-	                    <div class="grid_el center spacer"></div>
-	                    <div class="grid_el"><strong>License and State:</strong>					</div>
-	                    <div class="grid_el">LC1913 Maryland										</div>
-	                    <div class="grid_el center spacer"></div>
-	                    <div class="grid_el"><strong>Languages:</strong>					</div>
-	                    <div class="grid_el">English, Spanish										</div>
-	        	</div>
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
 	        	<div id="card_contact" class="card">
 	        		<strong>Cira Canelas</strong><br/>
@@ -152,10 +183,10 @@
 	                <div class="minor_text">"what i am, i must become"</div>
 	        	</div>
 	        </div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
         </div>
-
-
-
     </body>
 
 
