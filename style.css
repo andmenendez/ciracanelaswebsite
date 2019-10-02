@@ -5,10 +5,12 @@ body {
 	top: 0;
 	left:0;
 	height: 100vh;
+	width: 100vw;
 	min-height: 100%;
 	overflow: hidden;
 	transition: 2s;
 	transition-delay: 5s;
+	overflow-x: hidden;
 }
 #main {
 	height: 100vh;
@@ -37,8 +39,7 @@ body {
 	font-family: 'Poppins', serif;
 	font-size: 72px;
 	color: white;
-	padding-right: 12vw;
-	width: 100%;
+	/*padding-right: 12vw;*/
 	z-index: 1000;
 
 	transition: 1s;
@@ -51,26 +52,27 @@ body {
 	padding-right: 50px;
 }
 #title_name1 {
-	font-size: 58px;
+	font-size: 52px;
 	position: absolute;
 	top: 5%;
-	left: 15%;
+	left: 12%;
 }
 #title_therapy1 {
 	position: absolute;
+	font-size: 42px;
 	top:40%;
 	left: 40%;
 }
 #title_name2 {
 	position: absolute;
-	top: 0%;
-	left: 20%;
+	top: 5%;
+	left: 10%;
 	opacity: 0;
 	transition: 2s;
 }
 #title_therapy2 {
 	position: absolute;
-	top:50%;
+	top:45%;
 	left: 50%;
 	opacity: 0;
 	transition: 2s;
@@ -125,7 +127,7 @@ body {
 }
 #all {
 	overflow: scroll;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -203,7 +205,7 @@ body {
 #cards {
 	position: relative;
 	height: 88vh;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
