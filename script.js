@@ -15,7 +15,7 @@ var letters = letters_title_name;
 for(var i = 0; i < letters.length; i++) {
   var letter = document.createElement('span');
   var style = 'opacity 2s linear';
-  var delay = (Math.random() * 2) + 1;
+  var delay = (Math.random() * 2);
   letter.appendChild(document.createTextNode(letters[i]));
   letter.style.WebKitTransition   = letter.style.transition = style;
   letter.style.WebKitTransitionDelay   = letter.style.transitionDelay = delay + 's';
