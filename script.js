@@ -26,11 +26,6 @@ window.onbeforeunload = function () {
 	  title_name.appendChild(letter);
 	}
 
-	setTimeout(function() {
-	  for(var i = 0; i < title_name.childNodes.length; i++) {
-	    title_name.childNodes[i].style.opacity = 0;
-	  }
-	}, 0);
 
 	// -------------- -------------- -------------- -------------- -------------- --------------
 
@@ -53,11 +48,20 @@ window.onbeforeunload = function () {
 	  letter.style.opacity = 1;
 	  title_therapy.appendChild(letter);
 	}
+
+window.onload = function () {
+
+	setTimeout(function() {
+	  for(var i = 0; i < title_name.childNodes.length; i++) {
+	    title_name.childNodes[i].style.opacity = 0;
+	  }
+	}, 1000);
+	
 	setTimeout(function() {
 	  for(var i = 0; i < title_therapy.childNodes.length; i++) {
 	    title_therapy.childNodes[i].style.opacity = 0;
 	  }
-	}, 1000);
+	}, 3000);
 
 	setTimeout(function() {
 		document.getElementById("title_name2").style.opacity = 1;
@@ -67,7 +71,7 @@ window.onbeforeunload = function () {
 	setTimeout(function() {
 		 updateView()
 		}, 9000);
-
+}
 // -------------- -------------- -------------- -------------- -------------- --------------
 
 function updateView() {
