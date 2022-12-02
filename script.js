@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	setTimeout(function() {
 		 updateView()
 		}, 9000);
-}
 // -------------- -------------- -------------- -------------- -------------- --------------
 
 function updateView() {
@@ -145,6 +144,7 @@ function turnOn_contact() {
 	// });
 }
 
+}
 window.addEventListener('mousewheel', updateView);
 
 
