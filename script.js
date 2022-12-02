@@ -4,7 +4,7 @@ window.onbeforeunload = function () {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+
 
 	var title_name = document.getElementById("title_name1")
 	var letters_title_name = title_name.textContent.split("")
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	  letter.style.opacity = 1;
 	  title_therapy.appendChild(letter);
 	}
-
+window.onload = function() {
 	setTimeout(function() {
 	  for(var i = 0; i < title_therapy.childNodes.length; i++) {
 	    title_therapy.childNodes[i].style.opacity = 0;
@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	setTimeout(function() {
 		 updateView()
 		}, 9000);
+}
 // -------------- -------------- -------------- -------------- -------------- --------------
 
 function updateView() {
@@ -144,7 +145,7 @@ function turnOn_contact() {
 	// });
 }
 
-}
+
 window.addEventListener('mousewheel', updateView);
 
 
