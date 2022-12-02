@@ -53,7 +53,6 @@ window.onbeforeunload = function () {
 	  letter.style.opacity = 1;
 	  title_therapy.appendChild(letter);
 	}
-window.onload = function() {
 	setTimeout(function() {
 	  for(var i = 0; i < title_therapy.childNodes.length; i++) {
 	    title_therapy.childNodes[i].style.opacity = 0;
@@ -68,7 +67,7 @@ window.onload = function() {
 	setTimeout(function() {
 		 updateView()
 		}, 9000);
-}
+
 // -------------- -------------- -------------- -------------- -------------- --------------
 
 function updateView() {
