@@ -4,14 +4,14 @@ body {
 
 	top: 0;
 	left:0;
-	height: 100vh;
+	/* height: 100vh; */
 	width: 100vw;
 	min-height: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	transition: 2s;
 	transition-delay: 5s;
-	overflow-x: hidden;
-	background-color: black;
+	/* overflow-x: hidden; */
+	/* background-color: black; */
 	
 	border: 0;
 	margin: 0;
@@ -130,7 +130,7 @@ body {
 	color: rgba(255,255,255,0.2);
 }
 #all {
-	overflow: scroll;
+	overflow: auto;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
@@ -179,7 +179,9 @@ body {
 	background-color: rgba(55,50,133,0.05);
 	border: 3px solid rgba(255,255,255,1);
 	border-radius: 2px;
+	z-index: 1999;
 }
+
 .nav:hover {
 	transition: 0.2s;
 	color: white;
@@ -208,12 +210,12 @@ body {
 }
 #cards {
 	position: relative;
-	height: 88vh;
+	min-height: 88vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow: hidden;
+	/* overflow: hidden; */
 
 	background: -webkit-linear-gradient(rgb(255,255,255), rgb(255,255,255), rgba(199,189,255,0.2));
 	background: -o-linear-gradient(rgb(255,255,255), rgb(255,255,255), rgba(199,189,255,0.2));
@@ -226,11 +228,10 @@ body {
 }
 strong {
 	font-size: 22px;
-	maring-bottom: 0;
+	margin-bottom: 0;
 	padding-bottom: 0;
 }
 .card {
-	position: absolute;
 	padding: 0;
 	margin: 0;
 	width: 60%;
@@ -250,7 +251,7 @@ strong {
 	text-align: center;
 	opacity: 1;
 }
-#card_home img {
+#card_home #websitelogo {
 	width: 			50px;
 	height: 		50px;
 	border-radius: 	50px;
@@ -270,6 +271,8 @@ strong {
 	grid-template-columns: 50% 50%;
 }
 #card_treatment {
+
+	/* margin-top: -1225px !important; */
 	grid-template-columns: 40% 60%;
 }
 #card_treatment {
@@ -302,6 +305,7 @@ strong {
 }
 #card_qualifications {
 	grid-template-columns: 40% 60%;
+	/* margin-top: -625px !important; */
 }
 #card_qualifications .grid_el {
 	margin: 5px;
@@ -309,7 +313,22 @@ strong {
 #card_qualifications p {
 	font-size: 14px	;
 }
+#profile-picture-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#profile-picture {
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	border: 1px solid rgb(100,100,100);
+	object-fit: cover;
+	object-position: 0px -35px;
+}
 #card_contact {
+	height: 200px;
+	overflow-y: hidden;
 	width: 20%;
 	padding: 50px;
 	margin: 5px;

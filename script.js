@@ -75,6 +75,11 @@ window.onload = function () {
 // -------------- -------------- -------------- -------------- -------------- --------------
 
 function updateView() {
+	if (document.getElementById("continue_text").display !== 'hidden') {
+		document.getElementById("card_home").style.opacity = 1;
+		document.getElementById("card_home").style.display = '';
+	}
+	
 	document.getElementById("continue_text").display = "hidden";		
 	document.getElementById("continue_text").style.opacity = 0;
 
@@ -89,6 +94,7 @@ function updateView() {
 	document.querySelectorAll(".content").forEach((el) => {
 		el.style.opacity = "1";
 	});
+
 }
 // document.getElementById("continue_text").addEventListener("click", updateView());
 
@@ -97,60 +103,73 @@ function turnOff(element) {
 }
 function turnOn(element) {
 	document.getElementById("card_" + element).style.opacity = 1;
+	document.getElementById("card_" + element).style.display = '';
 	document.getElementById("nav_" + element).classList.add("nav_selected");
 }
 function turnAllOff() {
 	document.querySelectorAll(".card").forEach(x => {
 		x.style.opacity = 0;
+		x.style.display = 'none';
 	});
 
 	document.querySelectorAll(".nav").forEach(x => {
 		x.classList.remove("nav_selected");
 	});
 }
+
 function turnOffContact() {
 	document.getElementById("card_contact").style.transform = "translateY(1000px)";
 }
 
+
+['home','qualifications','treatment','sessions','contact'].forEach( (el) => {
+	document.getElementById('nav_'+el).addEventListener('click', () => {
+		turnAllOff();
+		turnOffContact();
+		turnOn(el);
+	})
+})
+
+document.querySelectorAll(".card").forEach(x => {
+	x.style.opacity = 0;
+	x.style.display = 'none';
+});
 function turnOn_home() {
-	// document.getElementById("nav_home").addEventListener("click", function() {
-		turnAllOff();
-		turnOffContact();
-		turnOn("home");
-	// });
+	turnAllOff();
+	turnOffContact();
+	turnOn("home");
 }
+
 function turnOn_treatment() {
-	// document.getElementById("nav_treatment").addEventListener("click", function() {
-		turnAllOff();
-		turnOffContact();
-		turnOn("treatment");
-	// });
+	turnAllOff();
+	turnOffContact();
+	turnOn("treatment");
 }
+
 function turnOn_sessions() {
-	// document.getElementById("nav_sessions").addEventListener("click", function() {
-		turnAllOff();
-		turnOffContact();
-		turnOn("sessions");
-	// });
+	turnAllOff();
+	turnOffContact();
+	turnOn("sessions");
 }
+
 function turnOn_qualifications() {
-	// document.getElementById("nav_qualifications").addEventListener("click", function() {
-		turnAllOff();
-		turnOffContact();
-		turnOn("qualifications");
-	// });
+	turnAllOff();
+	turnOffContact();
+	turnOn("qualfications");
 }
 function turnOn_contact() {
-	// document.getElementById("nav_contact").addEventListener("click", function() {
-		turnAllOff();
-		document.getElementById("card_contact").style.transform = "translateY(0px)";
-		turnOn("contact");
-	// });
+	turnAllOff();
+	document.getElementById("card_contact").style.transform = "translateY(0px)";
+	turnOn("contact");
 }
 
 
-window.addEventListener('mousewheel', updateView);
+document.getElementById("main").addEventListener('mousewheel', ()=>{
+	if (document.getElementById("continue_text").display !== 'hidden') {
+		updateView()
+	}
 
+});
 
 
 
