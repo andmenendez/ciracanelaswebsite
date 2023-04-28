@@ -79,18 +79,13 @@ function updateView() {
 		document.getElementById("card_home").style.opacity = 1;
 		document.getElementById("card_home").style.display = '';
 	}
-	
+
 	document.getElementById("continue_text").display = "hidden";		
 	document.getElementById("continue_text").style.opacity = 0;
 
 	document.getElementById("main").style.height = "0vh";
 	document.getElementById("main").style.opacity = 0;
  	
- 	setTimeout(function() {
- 		document.getElementById("all").style.overflow = "visible";
-	    document.body.style.overflowY = "auto";
-	}, 750);
-
 	document.querySelectorAll(".content").forEach((el) => {
 		el.style.opacity = "1";
 	});
