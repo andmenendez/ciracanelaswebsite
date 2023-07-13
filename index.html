@@ -2,9 +2,10 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <TITLE>Cira Canelas | Therapy</TITLE>
+        <title>Cira Canelas | Therapy</title>
         <link href="https://fonts.googleapis.com/css?family=Bilbo|Caveat|Libre+Baskerville|Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.2">
     </head>
 
     <body>
@@ -12,11 +13,11 @@
     	<div id="main">
     		<span id="title_text">
 		        
-		        <div  class="noselect title_name"  id="title_name1"    >what i am, i must become,</div>
-		        <div  class="noselect title_name"  id="title_name2"    >Cira Canelas, LCPC</div>
+		        <div  class="noselect title_name title-parts"  id="title_name1"    >what I AM, I must become,</div>
+		        <div  class="noselect title_name title-parts"  id="title_name2"    >Cira Canelas, LCPC</div>
 		        
-		        <div class="noselect title_therapy"  id="title_therapy1" >to evolve is to look within</div>
-		        <div class="noselect title_therapy"  id="title_therapy2" >Psychotherapist</div>
+		        <div class="noselect title_therapy title-parts"  id="title_therapy1" >to evolve is to look within</div>
+		        <div class="noselect title_therapy title-parts"  id="title_therapy2" >Psychotherapist</div>
 
 		    </span>
 		    <span id="continue_text" class= "noselect" onclick="updateView()">scroll or click here<br/>to skip..<br/></span>
@@ -35,7 +36,7 @@
 
 	        		<span id="nav_qualifications" class="nav content noselect">About Me</span>
 
-	        		<span id="nav_treatment" class="nav content noselect">Treatment</span>
+	        		<!-- <span id="nav_treatment" class="nav content noselect">Treatment</span> -->
 
 	        		<span id="nav_sessions" class="nav content noselect">Sessions</span>
 
@@ -103,25 +104,25 @@
 			</div>
 	</div>
 
-                    <div class="grid_el"><strong>Years in Practice:</strong></div>
-                    <div class="grid_el">20+ Years</div>
+                    <div class="grid_el bold">Years in Practice:</div>
+                    <div class="grid_el">30+ Years</div>
                     <div class="grid_el center spacer"></div>
-                    <div class="grid_el"><strong>School:</strong></div>
+                    <div class="grid_el bold">School:</div>
                     <div class="grid_el">University of Belgrano, Masters in Clinical Psychology</div>
                     <div class="grid_el center spacer"></div>
-                    <div class="grid_el"><strong>Year Graduated:</strong></div>
+                    <div class="grid_el bold">Year Graduated:</div>
                     <div class="grid_el">1992</div>
                     <div class="grid_el center spacer"></div>
-                    <div class="grid_el"><strong>License and State:</strong></div>
+                    <div class="grid_el bold">License & State:</div>
                     <div class="grid_el">LC1913 Maryland</div>
                     <div class="grid_el center spacer"></div>
-                    <div class="grid_el"><strong>Languages:</strong></div>
+                    <div class="grid_el bold">Languages:</div>
                     <div class="grid_el">English, Spanish</div>
 </div>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
-				<div id="card_treatment" class="card grid_display">
+				<!-- <div id="card_treatment" class="card grid_display">
 					<div class="grid_el center spacer" style="margin-top: 0px; padding:0;"></div>
 					<div class="grid_el"><strong>Focus Issues:</strong></div>
 	        			<div class="minor_text">
@@ -163,48 +164,48 @@
 						</div>
                     <div class="grid_el center spacer"></div>
 
-	            </div>
+	            </div> -->
 
 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
 	            <div id="card_sessions" class="card grid_display">
 					<div class="grid_el center spacer" style="margin-top: 0px; padding:0;"></div>
-					<div class="center"><p><strong>Cost per Session:</strong> $150+ </p></div>
+					<div class="center"><div id="cost-per-session"><strong>Cost per Session:</strong><br/> $150+ </div></div>
 					<div class="center minor_text">*English & Spanish</p></div>
 					<div class="center minor_text">*Sliding Scale</p></div>
 					<div class="center spacer"></div>
-					<div class="grid_el mid">
-	                	<div class=""><p><strong>Payment Methods:</strong>
-		                <ul class="minor_text">
-			                	<li>American Express, Mastercard, Visa</li>
-			                	<li>Cash</li>
-		                		<li>Check</li>
-		            			<li>Paypal</li>
-		            		</ul>
-	            		</p></div>
-	            	</div>
-					<div class="grid_el mid">
-		                <div class=""><p><strong>Accepted Insurance Plans</strong>
-						<ul class="minor_text">
-			                    <li>BlueCross and BlueShield</li>
-			                    <li>Medicaid</li>
-			                    <li>Out of Network</li>
-		                    </ul>
-	                    </p>
-	                    <p class="minor_text">*Verify your health insurance coverage<br/>when you arrange your first visit.</p>
-	                    </div>
-	                </div>
+					<div id="card-session-wrapper">
+						<div class="card-session-div">
+						<strong>Payment Methods:</strong>
+							<ul class="minor_text">
+								<li>American Express, Mastercard, Visa</li>
+								<li>Cash</li>
+								<li>Check</li>
+								<li>Paypal</li>
+							</ul>
+						</div>
+						<div class="card-session-div">
+							<strong>Accepted Insurance Plans</strong>
+							<ul class="minor_text">
+								<li>BlueCross and BlueShield</li>
+								<li>Medicaid</li>
+								<li>Out of Network</li>
+							</ul>
+
+							<p class="minor_text">*Verify your health insurance coverage<br/>when you arrange your first visit.</p>
+						</div>
+					</div>
 	        	</div>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
 	        	<div id="card_contact" class="card">
-	        		<strong>Cira Canelas</strong><br/>
+	        		<strong>Cira Canelas</strong>
 	        		<a tabindex="-1" href = "mailto: ciracanelas@gmail.com">ciracanelas@gmail.com</a>
 	        		<a tabindex="-1" href = "tel: 301-882-1870">(301)-592-7425</a>
 					<div class="grid_el center spacer"></div>
 	                <img src="logo.jpg" alt="ciracanelaslogo">
-	                <div class="minor_text">"what i am, i must become"</div>
+	                <div class="minor_text">"what I AM, I must become"</div>
 	        	</div>
 	        </div>
 

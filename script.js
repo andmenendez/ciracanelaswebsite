@@ -3,9 +3,6 @@ window.onbeforeunload = function () {
   window.tabindex="-1"
 }
 
-
-
-
 	var title_name = document.getElementById("title_name1")
 	var letters_title_name = title_name.textContent.split("")
 	while(title_name.hasChildNodes()) {
@@ -17,7 +14,7 @@ window.onbeforeunload = function () {
 
 	for(var i = 0; i < letters.length; i++) {
 	  var letter = document.createElement('span');
-	  var style = 'opacity 2s linear';
+	  var style = 'opacity 1.5s linear';
 	  var delay = (Math.random() * 2);
 	  letter.appendChild(document.createTextNode(letters[i]));
 	  letter.style.WebKitTransition   = letter.style.transition = style;
@@ -40,7 +37,7 @@ window.onbeforeunload = function () {
 
 	for(var i = 0; i < letters.length; i++) {
 	  var letter = document.createElement('span');
-	  var style = 'opacity 2s linear';
+	  var style = 'opacity 1.5s linear';
 	  var delay = (Math.random() * 2) + 2;
 	  letter.appendChild(document.createTextNode(letters[i]));
 	  letter.style.WebKitTransition   = letter.style.transition = style;
@@ -50,7 +47,7 @@ window.onbeforeunload = function () {
 	}
 
 window.onload = function () {
-
+	// turnAllOff();
 	setTimeout(function() {
 	  for(var i = 0; i < title_name.childNodes.length; i++) {
 	    title_name.childNodes[i].style.opacity = 0;
@@ -61,15 +58,20 @@ window.onload = function () {
 	  for(var i = 0; i < title_therapy.childNodes.length; i++) {
 	    title_therapy.childNodes[i].style.opacity = 0;
 	  }
-	}, 3000);
+	}, 1200);
 
 	setTimeout(function() {
 		document.getElementById("title_name2").style.opacity = 1;
+	},5000);
+	setTimeout(function() {
 		document.getElementById("title_therapy2").style.opacity = 1;	
-	},7000);
+	},6000);
 
 	setTimeout(function() {
-		 updateView()
+		 updateView();
+		 if (document.getElementById("continue_text").display !== 'hidden') {
+		 turnOn("home");
+		 };
 		}, 9000);
 }
 // -------------- -------------- -------------- -------------- -------------- --------------
@@ -89,9 +91,25 @@ function updateView() {
 	document.querySelectorAll(".content").forEach((el) => {
 		el.style.opacity = "1";
 	});
-
+	setTimeout(function() {
+		document.getElementById('all').style.position='static';
+	},900);
 }
-// document.getElementById("continue_text").addEventListener("click", updateView());
+
+// Click on "TO SKIP"
+document.getElementById("main").addEventListener("mousedown", ()=>{
+	updateView();
+	turnOn("home");
+});
+document.getElementById("main").addEventListener("touchmove", ()=>{
+	updateView();
+	turnOn("home");
+});
+document.getElementById("main").addEventListener("scroll", (e)=>{
+	updateView();
+	turnOn("home");
+	preventDefault(e);
+});
 
 function turnOff(element) {
 	element.style.opacity = 0;
@@ -113,11 +131,12 @@ function turnAllOff() {
 }
 
 function turnOffContact() {
-	document.getElementById("card_contact").style.transform = "translateY(1000px)";
+	return
+	// document.getElementById("card_contact").style.transform = "translateY(1000px)";
 }
 
 
-['home','qualifications','treatment','sessions','contact'].forEach( (el) => {
+['home','qualifications','sessions','contact'].forEach( (el) => {
 	document.getElementById('nav_'+el).addEventListener('click', () => {
 		turnAllOff();
 		turnOffContact();
